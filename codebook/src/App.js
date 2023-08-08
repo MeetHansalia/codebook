@@ -1,18 +1,20 @@
 
-import { Fragment } from 'react';
+
 import './App.css';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import TaskList from './components/TaskList';
+import Footer from './components/Footer.js'
+
 
 function App() {
+  const info = "Random"
+
   return (
-    <Fragment>
+    <div className="App">
       <Header/>
-      <div>
-        <h1>Meet</h1>
-      </div>
+      <TaskList xyz={info}/>
       <Footer/>
-    </Fragment>
+    </div>
   );
 }
 
