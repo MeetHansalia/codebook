@@ -1,4 +1,4 @@
-
+import './BoxCard.css'
 import React, { useState } from 'react'
 
 const BoxCard = ({result, children}) => {

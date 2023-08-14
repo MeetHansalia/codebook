@@ -1,21 +1,26 @@
 
-
+import { useState } from 'react';
 import './App.css';
 import Header from './components/Header';
 import TaskList from './components/TaskList';
 import Footer from './components/Footer.js'
+import AddTask from './components/AddTask';
 
 
 function App() {
-  const info = "Random"
+  const[tasks, setTasks]=useState([])
+
 
   return (
     <div className="App">
       <Header/>
-      <TaskList xyz={info}/>
+      <main>
+        <AddTask tasks={tasks} setTasks={setTasks}/>
+        <TaskList tasks={tasks} setTasks={setTasks}/>
+      </main>
       <Footer/>
     </div>
   );
 }
 
-export default App;
+export default App; 
